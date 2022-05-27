@@ -38,7 +38,7 @@ public class Part04Transform {
 
     // TODO Capitalize the users username, firstName and lastName using #asyncCapitalizeUser
     Flux<User> asyncCapitalizeMany(Flux<User> flux) {
-//        return flux.flatMap(this::asyncCapitalizeUser);
+
         return flux.flatMap(user -> asyncCapitalizeUser(
                 new User(user.getUsername(),
                         user.getFirstname(),
